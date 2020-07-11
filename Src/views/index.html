@@ -1,0 +1,85 @@
+
+{% extends "layout.html"%}
+{% set pageId = "page-home" %}
+
+<!--esse doctype e as fontes estao vindo da pagina layout.html -->
+<!--<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">-->
+  
+  <title>E-Coleta</title>
+
+  {% block styles %}
+
+  <link rel="stylesheet" href="/Styles/home.css">
+  <link rel="stylesheet" href="/Styles/modal.css">
+  
+  {% endblock styles %}
+ 
+  <!--<link rel="stylesheet" href="/Styles/main.css">
+
+  <link rel="stylesheet" href="/Styles/responsive.css">-->
+</head>
+ 
+  <!--{# <div id="page-home"> #}-->
+ {% block content %}
+ <div class="content">
+  <header>
+   <img src="/icones/logo.svg" alt="logomarca">
+    <a href="/create-point">
+      <span></span>
+      Cadastre um ponto de coleta
+    </a>
+  </header>
+
+  <main>
+    <h1>Seu marketplace de coleta de resíduos</h1>
+    <!--<h1>{{title}}</h1>-->
+
+  <p class="red">Ajudamos Pessoas a encontrarem pontos de coleta de forma eficiente</p>
+  
+  <a href="#"><span></span><strong>Pesquisar por pontos de coleta</strong></a>
+  
+  </main>
+  
+</div>
+ {% endblock content%}
+   
+  <!--</div> fim da div page home que n esta ssendo utilizada
+
+ <--fim div page home -->
+
+ <!-- <div id="modal" class="hide"><--Inicio div modal tela ponto de buscas -
+    <div class="content">
+    <div class="header">
+      <h1>Pontos de Coleta</h1>
+      <a href="#">Fechar</a>
+    </div>
+    <form action="/search-result">
+      <label for="search">Cidade</label>
+      <div class="field">
+        <input type="text" name="search" placeholder="Pesquise por cidade">
+        <button>
+          <img src="/icones/search.svg" alt="Buscar">
+        </button>
+
+      </div>
+    </form>
+  </div>
+  
+</div> esse modal ta vindo do arquivo modal.html --> 
+{% block modal %}
+  {% include "pedacos/modal.html"%}
+{% endblock modal%}
+
+
+{% block scripts%}
+  <script src="/Scripts/index.js"></script>
+{% endblock scripts%}
+<!--</body>
+</html>-->

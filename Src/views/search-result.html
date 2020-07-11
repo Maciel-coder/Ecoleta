@@ -1,0 +1,66 @@
+{% extends "layout.html"%}
+{% set pageId = "page-search-result" %}
+
+{% block title %}
+<title>Resultado da Pesquisa</title>
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="/Styles/search-results.css">
+{% endblock styles %}
+
+{% block content %}
+
+{% include "pedacos/page-header.html"%}
+
+
+
+<main>
+  {% if total >0%}
+  <h4>
+    <strong>{{total}} pontos de coleta</strong> encontrados
+  </h4>
+  <div class="cards">
+    {% for place in places %}
+    <div class="card">
+      <img
+        src="{{ place.image }}"
+        alt="{{place.name}}">
+      <h1>{{place.name}}</h1>
+      <h3>{{place.items}}</h3>
+      <p>
+        {{place.city}}, {{place.state}} <br/>
+        {{place.address}} <br/>
+        {{place.address2}}
+      </p>
+    </div>
+    {% endfor %}
+
+    
+
+    <!--<div class="card">
+      <img
+        src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+        alt="coletoria">
+      <h1>Paersider</h1>
+      <h3>Papeis e Papelão</h3>
+      <p>
+        Rio do Sul, Santa Catarina <br />
+        Guilherme Gemballa, Jardim America <br />
+        Numero 260
+      </p>
+    </div>-->
+  </div>
+  {% else %}
+  <h4><strong>Nenhum</strong> local emcontrado</h4>
+  {% endif %}
+</main>
+
+{% endblock content%}
+<!--<header>
+       <img src="/icones/logo.svg" alt="logomarca">
+        <a href="/">
+          <span></span>
+          Voltar para Home
+        </a>
+      </header> esse cabecalho ta vindo do arquivo page-header.html -->
