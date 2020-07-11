@@ -1,0 +1,37 @@
+/*tipos de display: display inline ocupa somente o tamanho 
+do elemento. e eles ficam sempre um do lado do outro
+Display Block - são caixas na estrutura um abaixo do outro e 
+por padrão ocupatodo o espaço da pagina no setdo orizontal
+Esses dois tipos de display são relacionados as caixa pelo lado de fora
+pelo lado de exite uma serie de opções uma eleas é um flex que deixa uma caixa do lado da outra
+
+*/
+
+:root{
+  --title-color: #322153; /*Define uma cor e armazena em uma especie de varivel que global */
+  --primary-color: #34cb79;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+ 
+  font-family: 'Roboto', sans-serif;
+  
+}
+body{
+  background: #f0f0f5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a{
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--title-color);
+}
+
